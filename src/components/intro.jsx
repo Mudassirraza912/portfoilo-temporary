@@ -11,7 +11,7 @@ class Intro extends React.Component {
         <div id="stars2" />
         <div id="stars3" />
 
-        <div className="intro-content display-table">
+        <div className="intro-content display-table" style={{marginTop: "10%"}}> 
           <div className="table-cell">
             <div className="container">
               <h1 className="intro-title mb-4">Hello, I am Mudassir Raza</h1>
@@ -45,8 +45,9 @@ class Intro extends React.Component {
               </p>
                   <p className="pt-3">
                       <a
-                        className="btn btn-outline-primary px-4"
-                        href="#work"
+                        target="blank"
+                        className="btn btn-primary px-4"
+                        href="https://drive.google.com/file/d/1jRW9ptlJ05aUT5skazoLq7qOTlomU_5i/view?usp=sharing"
                         role="button"
                       >
                       View Resume

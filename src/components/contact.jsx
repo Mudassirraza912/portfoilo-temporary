@@ -1,5 +1,6 @@
 import React from "react";
 import imageOverlay from "../img/earth.jpg";
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 class Contact extends React.Component {
   render() {
@@ -15,6 +16,16 @@ class Contact extends React.Component {
               <div className="contact-mf">
                 <div id="contact" className="box-shadow-full">
                   <div className="row">
+                  <div className="col-md-6">
+                  <Map
+                      google={this.props.google}
+                      zoom={10}
+                      style={{height: "90%", width: "90%",}}
+                      initialCenter={{ lat: 24.9659038, lng: 66.9868871}}
+                    >
+                      <Marker position={{lat: 24.9659038, lng: 66.9868871}} />
+                    </Map>
+                  </div>
                     {/* <div className="col-md-6">
                       <div className="title-box-2">
                         <h5 className="title-left">Send A Message</h5>
@@ -150,6 +161,18 @@ class Contact extends React.Component {
                               </span>
                             </a>
                           </li>
+                          <li>
+                            <a
+                              // href="https://www.facebook.com/mudassir.raza.102/"
+                              // target="_blank"
+                              href="https://wa.me/923132723695/?text=hellow world"
+                              rel="noopener noreferrer"
+                            >
+                              <span className="ico-circle">
+                                <i className="ion-social-whatsapp"></i>
+                              </span>
+                            </a>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -174,4 +197,6 @@ class Contact extends React.Component {
   }
 }
 
-export default Contact;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyCVmHvuuAUemB_HH4EUHuTEnIPbRaskwe4'
+})(Contact);
