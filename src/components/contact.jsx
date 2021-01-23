@@ -6,6 +6,7 @@ class Contact extends React.Component {
   render() {
     return (
       <section
+        id="contact"
         className="paralax-mf footer-paralax bg-image sect-mt4 route"
         style={{ backgroundImage: "url(" + imageOverlay + ")" }}
       >
@@ -14,7 +15,7 @@ class Contact extends React.Component {
           <div className="row">
             <div className="col-sm-12">
               <div className="contact-mf">
-                <div id="contact" className="box-shadow-full">
+                <div  className="box-shadow-full">
                   <div className="row">
                   <div className="col-md-6">
                   <Map
